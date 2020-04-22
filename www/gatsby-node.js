@@ -234,6 +234,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 videoTwoJob
                 videoTwoCompany
               }
+              html
             }
           }
         }
@@ -349,6 +350,7 @@ exports.createPages = async ({ graphql, actions }) => {
               videoTwoJob,
               videoTwoCompany,
               instanceTemplate: overrideInstanceTemplate,
+              html,
             } = node.frontmatter
             const learnToCodePartners = result.data.partners.nodes.filter(
               partner => {
@@ -386,6 +388,7 @@ exports.createPages = async ({ graphql, actions }) => {
                       locationImage && locationImage.childImageSharp,
                     videoCoachId,
                     videoOneTime,
+                    overview: html,
                     videoOneId: videoOneId ? videoOneId : '6hmKu1-vW-8',
                     videoOneQuote,
                     videoOneFullname,

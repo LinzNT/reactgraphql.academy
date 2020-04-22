@@ -28,7 +28,6 @@ import TrialOfCard from 'src/components/training/TrialOfCard'
 import PaymentSection from 'src/components/payment/PaymentSection'
 import { Link } from 'src/components/navigation'
 import Box from 'src/components/layout/Box'
-// import ContactForm from 'src/components/form/Contact'
 import FinanceCard from 'src/components/payment/FinanceCard'
 import BlogSection from 'src/components/blog/BlogSection'
 import { TECH_GRAPHQL } from '../../config/data'
@@ -53,6 +52,7 @@ const InstancePage = ({
   feedback,
   trainingId,
   pageContext: {
+    overview,
     locationImage,
     posts,
     subtitle,
@@ -239,6 +239,7 @@ const InstancePage = ({
         <Segment>
           <Curriculum
             {...curriculumProps}
+            overview={overview}
             training={training}
             learningObjectives={learningObjectives}
             trainingType={trainingType}

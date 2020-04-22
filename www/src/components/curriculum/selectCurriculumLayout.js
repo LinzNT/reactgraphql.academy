@@ -33,6 +33,7 @@ const selectCurriculumLayout = ({
   curriculumTitle = 'Curriculum',
   learningObjectives: LearningObjectives,
   defaultLearningObjectivesIsOpen = false,
+  overview,
 }) => {
   const curriculumButtonSection = (
     <SectionCTA>
@@ -71,6 +72,7 @@ const selectCurriculumLayout = ({
     return (
       <React.Fragment>
         {title}
+        {overview && overview}
         <Flex sx={{ flexDirection: 'column' }}>
           {firstHalf}
           {firstHalf.length > 2 && typedMarketingCard}
@@ -85,6 +87,7 @@ const selectCurriculumLayout = ({
     return (
       <React.Fragment>
         {title}
+        {overview && overview}
         <Flex sx={{ flexDirection: 'column' }}>
           <Row>
             <Col md={6} lg={5}>
@@ -107,6 +110,7 @@ const selectCurriculumLayout = ({
           <Row>
             <Col lg={10} lgOffset={1}>
               {title}
+              {overview && overview}
             </Col>
           </Row>
         )}
